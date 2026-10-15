@@ -16,7 +16,7 @@
   <li>Cosa ti serve: un accesso che non arriva, un rimborso, una domanda sull'app</li>
 </ul>
 <h4>Titolare</h4>
-<p><strong>{{ settings.ragione_sociale }}</strong><br>{{ settings.indirizzo }}</p>
+<p><strong>{{ settings.ragione_sociale | default: shop.name }}</strong><br>{{ settings.indirizzo | default: shop.address.summary }}</p>
 <p class="dp-modal__note">Non gestiamo un numero di telefono: l'assistenza scritta lascia traccia della richiesta e ci permette di inviarti link e file direttamente.</p>
       <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
     </div>
@@ -77,7 +77,7 @@
       <h2>Termini di servizio</h2>
       <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     </div>
-    <div class="dp-modal__body"><p>Acquistando dal negozio accetti i termini qui sotto. Il venditore è <strong>{{ settings.ragione_sociale }}</strong>, {{ settings.indirizzo }}.</p>
+    <div class="dp-modal__body"><p>Acquistando dal negozio accetti i termini qui sotto. Il venditore è <strong>{{ settings.ragione_sociale | default: shop.name }}</strong>, {{ settings.indirizzo | default: shop.address.summary }}.</p>
 <h4>Oggetto</h4>
 <p>Vendiamo l'accesso a vita all'app web Salvafrigo: inventario del frigo con avvisi di scadenza, lettura dello scontrino, ricette svuotafrigo, lista della spesa condivisa, contatore dei risparmi e contenuti collegati. L'accesso è personale e può essere usato dai componenti della stessa famiglia.</p>
 <h4>Scadenze e sicurezza alimentare</h4>
@@ -104,7 +104,7 @@
       <h2>Informativa privacy</h2>
       <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     </div>
-    <div class="dp-modal__body"><p>Trattiamo solo i dati necessari a completare l'ordine e a darti assistenza. Titolare del trattamento: <strong>{{ settings.ragione_sociale }}</strong>, {{ settings.indirizzo }} — <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a>.</p>
+    <div class="dp-modal__body"><p>Trattiamo solo i dati necessari a completare l'ordine e a darti assistenza. Titolare del trattamento: <strong>{{ settings.ragione_sociale | default: shop.name }}</strong>, {{ settings.indirizzo | default: shop.address.summary }} — <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a>.</p>
 <h4>Dati raccolti</h4>
 <ul>
   <li><strong>Dati d'ordine</strong>: nome, email, dati di fatturazione, importo. Servono a eseguire il contratto e a emettere il documento fiscale.</li>

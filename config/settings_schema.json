@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Salvafrigo",
     "theme_version": "1.0.0",
-    "theme_author": "LDP Consulting",
+    "theme_author": "Salvafrigo",
     "theme_documentation_url": "https://salvafrigo.it",
     "theme_support_url": "https://salvafrigo.it"
   },
@@ -11,8 +11,8 @@
     "name": "Generali",
     "settings": [
       { "type": "text", "id": "email_supporto", "label": "Email assistenza", "default": "supporto@salvafrigo.it" },
-      { "type": "text", "id": "ragione_sociale", "label": "Ragione sociale", "default": "LDP CONSULTING LLC" },
-      { "type": "text", "id": "indirizzo", "label": "Indirizzo", "default": "16192 Coastal Hwy, Lewes, DE 19958, Stati Uniti" }
+      { "type": "text", "id": "ragione_sociale", "label": "Ragione sociale", "info": "Se lo lasci vuoto usiamo il nome del negozio (Impostazioni → Negozio)." },
+      { "type": "text", "id": "indirizzo", "label": "Indirizzo", "info": "Se lo lasci vuoto usiamo l'indirizzo del negozio (Impostazioni → Negozio)." }
     ]
   },
   {

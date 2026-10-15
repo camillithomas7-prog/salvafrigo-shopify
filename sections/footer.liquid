@@ -26,7 +26,8 @@
         </ul>
       </div>
     </div>
-    <p class="dp-footer__legal">{{ section.settings.ragione_sociale }}</p>
+    {%- assign dp_legale = section.settings.ragione_sociale | default: settings.ragione_sociale | default: shop.name -%}
+    <p class="dp-footer__legal">{{ dp_legale }}{% if settings.indirizzo != blank %} — {{ settings.indirizzo }}{% elsif shop.address.summary != blank %} — {{ shop.address.summary }}{% endif %}</p>
     <div class="dp-footer__bar">
       <span>&copy; {{ 'now' | date: '%Y' }} {{ section.settings.nome | default: shop.name }}. Tutti i diritti riservati.</span>
       <span>App digitale — nessuna spedizione fisica.</span>
@@ -40,8 +41,7 @@
     { "type": "text", "id": "nome", "label": "Nome del negozio", "default": "Salvafrigo" },
     { "type": "textarea", "id": "descrizione", "label": "Descrizione",
       "default": "L'app che ti avvisa prima che il cibo scada e ti dice cosa cucinare con quello che hai in frigo. Pagamento unico, accesso a vita, garanzia 30 giorni." },
-    { "type": "textarea", "id": "ragione_sociale", "label": "Dati societari",
-      "default": "LDP CONSULTING LLC — 16192 Coastal Hwy, Lewes, DE 19958, Stati Uniti" }
+    { "type": "textarea", "id": "ragione_sociale", "label": "Dati societari", "info": "Se lo lasci vuoto usiamo nome e indirizzo del negozio." }
   ]
 }
 {% endschema %}
