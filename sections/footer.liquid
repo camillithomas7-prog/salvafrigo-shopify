@@ -1,0 +1,47 @@
+<footer class="dp-footer">
+  <div class="wrap">
+    <div class="dp-footer__grid">
+      <div>
+        <h4>{{ section.settings.nome | default: shop.name }}</h4>
+        <p style="margin:0;max-width:360px">{{ section.settings.descrizione }}</p>
+      </div>
+      <div>
+        <h4>L'app</h4>
+        <ul>
+          <li><a href="{{ routes.root_url }}#calcolo">Quanto butti in un anno</a></li>
+          <li><a href="{{ routes.root_url }}#app">Prova l'app</a></li>
+          <li><a href="{{ routes.root_url }}#offerta">Prezzo</a></li>
+          <li><a href="{{ routes.root_url }}#faq">Domande frequenti</a></li>
+          <li><a href="{{ routes.cart_url }}">Carrello</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Assistenza</h4>
+        <ul>
+          <li><button type="button" class="dp-policy-link" data-policy="contact">Contatti</button></li>
+          <li><button type="button" class="dp-policy-link" data-policy="delivery">Consegna e accesso</button></li>
+          <li><button type="button" class="dp-policy-link" data-policy="refund">Diritto di recesso</button></li>
+          <li><button type="button" class="dp-policy-link" data-policy="terms">Termini di servizio</button></li>
+          <li><button type="button" class="dp-policy-link" data-policy="privacy">Privacy</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="dp-footer__legal">{{ section.settings.ragione_sociale }}</p>
+    <div class="dp-footer__bar">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ section.settings.nome | default: shop.name }}. Tutti i diritti riservati.</span>
+      <span>App digitale — nessuna spedizione fisica.</span>
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "nome", "label": "Nome del negozio", "default": "Salvafrigo" },
+    { "type": "textarea", "id": "descrizione", "label": "Descrizione",
+      "default": "L'app che ti avvisa prima che il cibo scada e ti dice cosa cucinare con quello che hai in frigo. Pagamento unico, accesso a vita, garanzia 30 giorni." },
+    { "type": "textarea", "id": "ragione_sociale", "label": "Dati societari",
+      "default": "LDP CONSULTING LLC — 16192 Coastal Hwy, Lewes, DE 19958, Stati Uniti" }
+  ]
+}
+{% endschema %}

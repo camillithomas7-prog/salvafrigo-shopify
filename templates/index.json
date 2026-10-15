@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "home": {
+      "type": "home",
+      "settings": {
+        "handle": "salvafrigo"
+      }
+    }
+  },
+  "order": [
+    "home"
+  ]
+}

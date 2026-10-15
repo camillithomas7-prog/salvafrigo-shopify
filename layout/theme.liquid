@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#3E6A4F">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ 'favicon.svg' | asset_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>{{ page_title }}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+    {% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+    {{ content_for_header }}
+    <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+  </head>
+  <body class="template-{{ template.name }}">
+    <a class="visually-hidden" href="#MainContent">Vai al contenuto</a>
+    {% section 'header' %}
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
+    {% section 'footer' %}
+    {% render 'policy-modals' %}
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  </body>
+</html>

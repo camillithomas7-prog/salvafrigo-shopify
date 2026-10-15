@@ -1,0 +1,15 @@
+{%- assign product = all_products[section.settings.handle] -%}
+{%- if product -%}
+  {% render 'pl-page', product: product %}
+{%- else -%}
+  <div class="wrap" style="padding:120px 20px;text-align:center"><h1>Salvafrigo</h1><p>Importa il prodotto con handle <b>{{ section.settings.handle }}</b> (CSV incluso nel tema).</p></div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Home",
+  "settings": [
+    { "type": "text", "id": "handle", "label": "Handle del prodotto", "default": "salvafrigo" }
+  ],
+  "presets": [{ "name": "Home" }]
+}
+{% endschema %}

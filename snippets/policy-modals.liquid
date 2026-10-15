@@ -1,0 +1,126 @@
+{%- comment -%}Finestre legali del negozio.{%- endcomment -%}
+<div class="dp-modal" id="dp-policy-contact" hidden>
+  <div class="dp-modal__backdrop" data-close></div>
+  <div class="dp-modal__panel" role="dialog" aria-modal="true" aria-label="Contatti">
+    <div class="dp-modal__head">
+      <h2>Contatti</h2>
+      <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="dp-modal__body"><p>Siamo un progetto piccolo: ogni messaggio lo legge una persona, non un risponditore automatico.</p>
+<h4>Email</h4>
+<p><a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a> — rispondiamo entro 1 giorno lavorativo, di solito molto prima.</p>
+<h4>Cosa scrivere nel messaggio</h4>
+<ul>
+  <li>L'indirizzo email usato al momento dell'acquisto</li>
+  <li>Il numero d'ordine, se ce l'hai</li>
+  <li>Cosa ti serve: un accesso che non arriva, un rimborso, una domanda sull'app</li>
+</ul>
+<h4>Titolare</h4>
+<p><strong>{{ settings.ragione_sociale }}</strong><br>{{ settings.indirizzo }}</p>
+<p class="dp-modal__note">Non gestiamo un numero di telefono: l'assistenza scritta lascia traccia della richiesta e ci permette di inviarti link e file direttamente.</p>
+      <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
+    </div>
+  </div>
+</div>
+<div class="dp-modal" id="dp-policy-delivery" hidden>
+  <div class="dp-modal__backdrop" data-close></div>
+  <div class="dp-modal__panel" role="dialog" aria-modal="true" aria-label="Consegna e accesso">
+    <div class="dp-modal__head">
+      <h2>Consegna e accesso</h2>
+      <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="dp-modal__body"><p><strong>Salvafrigo è un'app digitale: non viene spedito nulla e non ci sono costi di consegna.</strong></p>
+<h4>Come ricevi l'app</h4>
+<ul>
+  <li>Il link di accesso personale arriva automaticamente all'email indicata al checkout, appena il pagamento è confermato — normalmente entro un minuto.</li>
+  <li>Nell'email trovi le istruzioni, con immagini passo passo, per aggiungere l'app alla schermata Home di iPhone o Android.</li>
+  <li>L'accesso non scade e comprende le nuove ricette e gli aggiornamenti futuri.</li>
+</ul>
+<h4>Se l'email non arriva</h4>
+<ul>
+  <li>Controlla la cartella spam o promozioni e cerca "Salvafrigo".</li>
+  <li>Verifica di non aver scritto male l'indirizzo al checkout.</li>
+  <li>Scrivici a <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a>: reinviamo l'accesso a mano, di solito in giornata.</li>
+</ul>
+<h4>Cosa serve per usarla</h4>
+<p>Uno smartphone iPhone o Android aggiornato e un browser (Safari o Chrome). Su iPhone le notifiche funzionano solo dopo aver aggiunto l'app alla schermata Home: per sicurezza ricevi i promemoria principali anche via email.</p>
+      <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
+    </div>
+  </div>
+</div>
+<div class="dp-modal" id="dp-policy-refund" hidden>
+  <div class="dp-modal__backdrop" data-close></div>
+  <div class="dp-modal__panel" role="dialog" aria-modal="true" aria-label="Diritto di recesso e rimborsi">
+    <div class="dp-modal__head">
+      <h2>Diritto di recesso e rimborsi</h2>
+      <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="dp-modal__body"><p>Salvafrigo è un contenuto digitale con accesso immediato dopo il pagamento. Oltre ai tuoi diritti di legge ti offriamo una garanzia commerciale volontaria.</p>
+<h4>Garanzia "ti ripaghi o rimborso" 30 giorni</h4>
+<p>Se entro 30 giorni dall'acquisto non risparmi almeno quanto hai speso, o semplicemente l'app non fa per te, scrivi a <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a> indicando numero d'ordine ed email d'acquisto: ti rimborsiamo l'intero importo, senza dover spiegare il motivo. Il rimborso torna sullo stesso metodo di pagamento entro 5-10 giorni lavorativi a seconda della banca, e l'accesso all'app viene disattivato.</p>
+<h4>Recesso di legge</h4>
+<p>Al momento dell'acquisto accetti che l'esecuzione inizi subito e riconosci che, ottenuto l'accesso, il diritto di recesso di legge non si applica (art. 59 lett. o del Codice del Consumo, D.lgs. 206/2005). La garanzia di 30 giorni qui sopra resta comunque valida.</p>
+<h4>Rimborsi sempre dovuti</h4>
+<ul>
+  <li>Doppio pagamento o addebito ripetuto per errore.</li>
+  <li>Accesso mai ricevuto e impossibile da ripristinare da parte nostra.</li>
+</ul>
+<p class="dp-modal__note">Nessun prodotto fisico viene spedito, quindi non esistono resi né spese di restituzione.</p>
+      <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
+    </div>
+  </div>
+</div>
+<div class="dp-modal" id="dp-policy-terms" hidden>
+  <div class="dp-modal__backdrop" data-close></div>
+  <div class="dp-modal__panel" role="dialog" aria-modal="true" aria-label="Termini di servizio">
+    <div class="dp-modal__head">
+      <h2>Termini di servizio</h2>
+      <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="dp-modal__body"><p>Acquistando dal negozio accetti i termini qui sotto. Il venditore è <strong>{{ settings.ragione_sociale }}</strong>, {{ settings.indirizzo }}.</p>
+<h4>Oggetto</h4>
+<p>Vendiamo l'accesso a vita all'app web Salvafrigo: inventario del frigo con avvisi di scadenza, lettura dello scontrino, ricette svuotafrigo, lista della spesa condivisa, contatore dei risparmi e contenuti collegati. L'accesso è personale e può essere usato dai componenti della stessa famiglia.</p>
+<h4>Scadenze e sicurezza alimentare</h4>
+<p>Le scadenze proposte dall'app sono indicative e si basano su tempi di conservazione tipici. Fa sempre fede la data riportata sulla confezione: controlla odore, aspetto e modalità di conservazione prima di consumare un alimento, soprattutto per carne, pesce e latticini freschi.</p>
+<h4>Risultati</h4>
+<p>Il risparmio dipende dalle abitudini di ogni famiglia e dall'uso costante dell'app: nessun importo di risparmio è garantito. Le cifre sullo spreco medio vengono dall'Osservatorio Waste Watcher; grafici, importi ed esempi mostrati in pagina sono illustrativi.</p>
+<h4>Licenza d'uso</h4>
+<ul>
+  <li>Non puoi rivendere, condividere o distribuire i contenuti dell'app (ricette, menu, testi, immagini).</li>
+  <li>La condivisione dell'accesso con terzi comporta la sospensione dell'account senza rimborso.</li>
+</ul>
+<h4>Prezzi e pagamenti</h4>
+<p>I prezzi sono in euro e comprendono le imposte eventualmente dovute. Il pagamento è gestito da provider esterni (Shopify Payments, PayPal e simili): non trattiamo né conserviamo i dati della tua carta.</p>
+<h4>Legge applicabile</h4>
+<p>Al contratto si applica la legge italiana per gli acquisti effettuati da consumatori residenti in Italia, fatte salve le norme inderogabili a tutela del consumatore.</p>
+      <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
+    </div>
+  </div>
+</div>
+<div class="dp-modal" id="dp-policy-privacy" hidden>
+  <div class="dp-modal__backdrop" data-close></div>
+  <div class="dp-modal__panel" role="dialog" aria-modal="true" aria-label="Informativa privacy">
+    <div class="dp-modal__head">
+      <h2>Informativa privacy</h2>
+      <button type="button" class="dp-modal__x" data-close aria-label="Chiudi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="dp-modal__body"><p>Trattiamo solo i dati necessari a completare l'ordine e a darti assistenza. Titolare del trattamento: <strong>{{ settings.ragione_sociale }}</strong>, {{ settings.indirizzo }} — <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a>.</p>
+<h4>Dati raccolti</h4>
+<ul>
+  <li><strong>Dati d'ordine</strong>: nome, email, dati di fatturazione, importo. Servono a eseguire il contratto e a emettere il documento fiscale.</li>
+  <li><strong>Dati di pagamento</strong>: gestiti direttamente dai circuiti di pagamento. Noi vediamo solo l'esito e gli ultimi numeri della carta.</li>
+  <li><strong>Dati dell'app</strong>: prodotti del frigo, scontrini letti, lista della spesa e ricette salvate. Servono solo a far funzionare l'app per te e la tua famiglia, e puoi cancellarli quando vuoi.</li>
+  <li><strong>Dati tecnici</strong>: pagine viste e statistiche aggregate del negozio, per capire cosa funziona e cosa no.</li>
+</ul>
+<h4>Base giuridica e conservazione</h4>
+<p>Esecuzione del contratto per i dati d'ordine, obblighi fiscali per la conservazione (10 anni), legittimo interesse per le statistiche aggregate, consenso per le eventuali email commerciali.</p>
+<h4>Comunicazione a terzi</h4>
+<p>I dati sono condivisi solo con i fornitori che rendono possibile il servizio: la piattaforma del negozio, il provider di pagamento, il servizio di invio email. Nessuna vendita di dati a terzi.</p>
+<h4>I tuoi diritti</h4>
+<p>Puoi chiedere in qualsiasi momento accesso, rettifica, cancellazione, limitazione, portabilità dei dati e opporti al trattamento scrivendo a <a href="mailto:{{ settings.email_supporto }}">{{ settings.email_supporto }}</a>. Hai inoltre diritto di reclamo al Garante per la protezione dei dati personali.</p>
+<h4>Cookie</h4>
+<p>Usiamo i cookie tecnici necessari al funzionamento del carrello e del checkout e, se acconsenti, cookie statistici. Puoi cancellarli dalle impostazioni del browser.</p>
+      <p class="dp-modal__updated">Ultimo aggiornamento: ottobre 2026</p>
+    </div>
+  </div>
+</div>

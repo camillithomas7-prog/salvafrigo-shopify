@@ -1,0 +1,290 @@
+{{ 'pl-page.css' | asset_url | stylesheet_tag }}
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>window.SF_IMG="{{ 'rc-polpette.jpg' | asset_url | split: 'rc-polpette.jpg' | first }}";</script>
+<form id="pl-atc" action="{{ routes.cart_add_url }}" method="post" hidden><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="&#10003;"><input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><input type="hidden" name="quantity" value="1"><input type="hidden" name="return_to" value="/checkout"></form><div class="pl">
+
+<div class="topbar">Prezzo di lancio <b>{{ product.price | money }}</b> invece di 59 € · paghi una volta sola · garanzia "ti ripaghi o rimborso"</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></i>Ogni italiano butta circa 140 € di cibo l'anno</span>
+      <h1 class="rv d1">Smetti di buttare <span class="strike">la spesa</span> nel cestino.</h1>
+      <p class="lead rv d2">Salvafrigo ti avvisa <b>prima</b> che il cibo scada e ti dice cosa cucinare con quello che hai già in frigo. Niente più insalata diventata acqua, pane duro nel sacchetto e yogurt dimenticati in fondo al ripiano.</p>
+      <ul class="ticks rv d3">
+        <li>Ti avvisa 2 giorni prima della scadenza, con la ricetta per salvarlo</li>
+        <li>Ricette svuotafrigo della cucina di casa, pronte in 15 minuti</li>
+        <li>Ti dice cosa hai già prima di ricomprarlo al supermercato</li>
+      </ul>
+      <div class="cta-row rv d4">
+        <a class="btn alt buy" href="#offerta">Voglio smettere di buttare soldi <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="price-mini"><b>{{ product.price | money }}</b><s>59 €</s><small>una volta sola · si ripaga in meno di un mese</small></div>
+      </div>
+    </div>
+    <div class="rcpt-w rv d2">
+      <div class="rcpt" id="rcpt">
+        <h4>LO SCONTRINO DELLO SPRECO</h4>
+        <div class="sub">famiglia di 4 persone · in un mese</div>
+        <div class="row"><span>Insalata in busta<small>diventata acqua</small></span><span>3,80 €</span></div>
+        <div class="row"><span>Pane<small>diventato duro</small></span><span>5,40 €</span></div>
+        <div class="row"><span>Frutta<small>ammaccata e dimenticata</small></span><span>9,60 €</span></div>
+        <div class="row"><span>Yogurt e latticini<small>scaduti in fondo al frigo</small></span><span>7,20 €</span></div>
+        <div class="row"><span>Mozzarella<small>comprata due volte</small></span><span>4,10 €</span></div>
+        <div class="row"><span>Avanzi<small>mai riscaldati</small></span><span>16,50 €</span></div>
+        <hr>
+        <div class="tot"><span>TOTALE BUTTATO</span><b>46,60 €</b></div>
+        <div class="yr">in un anno: <b>oltre 550 €</b></div>
+      </div>
+      <div class="stamp" id="stamp">MAI PIÙ</div>
+    </div>
+  </div>
+  <p class="src wrap">Stima basata sui dati dell'Osservatorio Waste Watcher 2025: circa 618 g di cibo buttati a settimana e circa 140 € l'anno per persona.</p>
+</section>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Avvisi prima della scadenza</span><span>Ricette svuotafrigo</span><span>Niente doppioni al supermercato</span><span>Il contatore dei soldi salvati</span><span>Tutta la famiglia sulla stessa lista</span>
+  <span>Avvisi prima della scadenza</span><span>Ricette svuotafrigo</span><span>Niente doppioni al supermercato</span><span>Il contatore dei soldi salvati</span><span>Tutta la famiglia sulla stessa lista</span>
+</div></div>
+
+<!-- ============ IL NERVOSO ============ -->
+<section class="nerv">
+  <div class="wrap center">
+    <span class="eyebrow rv">Ti suona familiare?</span>
+    <h2 class="rv d1">Quel nervoso quando apri il frigo<br><em>e devi buttare tutto.</em></h2>
+    <p class="lead rv d2">Non è che non ci tieni. È che nessuno ti avvisa in tempo. E ogni volta che apri il sacchetto dell'umido, butti via soldi che avevi già speso.</p>
+  </div>
+  <div class="wrap">
+    <div class="nerv-g">
+      <div class="nv rv"><span class="eur">−1,90 €</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 3 7 7 7 11a7 7 0 01-14 0c0-4 3-8 7-11z"/><path d="M9 15c0 1.7 1.3 3 3 3"/></svg></div><h3>L'insalata in busta</h3><p>Comprata lunedì "per mangiare sano". Giovedì è un sacchetto d'acqua verde.</p></div>
+      <div class="nv rv d1"><span class="eur">−1,20 €</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a8 5 0 0116 0v7a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M8 11v4M12 10v5M16 11v4"/></svg></div><h3>Il pane duro</h3><p>Mezza pagnotta che finisce nel sacchetto. Bastava farci le polpette o una panzanella.</p></div>
+      <div class="nv rv d2"><span class="eur">−2,40 €</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 4H8z"/><path d="M8 7l1 13a1 1 0 001 1h4a1 1 0 001-1l1-13"/><path d="M9.5 12h5"/></svg></div><h3>Lo yogurt dimenticato</h3><p>Scaduto da tre giorni, nascosto dietro il barattolo dei capperi. Ti accorgi solo quando è tardi.</p></div>
+      <div class="nv rv d3"><span class="eur">−2,05 €</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2l2.4 11h11l2-8H6.3"/></svg></div><h3>Il doppione</h3><p>Ricompri la mozzarella perché non ti ricordi di averla. Ne butti una delle due.</p></div>
+    </div>
+    <div class="nerv-split">
+      <img class="rv" src="{{ 'ph-nervoso.jpg' | asset_url }}" alt="Donna infastidita che butta l'insalata andata a male davanti al frigo aperto" loading="lazy">
+      <p class="nerv-q rv d1">Sembrano pochi euro. Ma sommati fanno <em>oltre 550 € l'anno</em> per una famiglia di 4: è come lasciare al supermercato <em>una spesa al mese</em> e poi buttarla nel cestino.<small>E non è solo questione di soldi: è il senso di colpa ogni volta che apri il sacchetto dell'umido, il tempo perso a fare una spesa che poi butti, la sensazione di non avere il controllo della tua cucina.</small></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCOLATORE ============ -->
+<section id="calcolo">
+  <div class="wrap center">
+    <span class="eyebrow rv">Fai il conto</span>
+    <h2 class="rv d1">Quanto stai buttando <em>tu?</em></h2>
+    <p class="lead rv d2">Tre domande, dieci secondi. Il risultato di solito fa male.</p>
+  </div>
+  <div class="wrap">
+    <div class="calc rv">
+      <div class="calc-in">
+        <div class="q"><label>Quante persone siete in casa?</label>
+          <div class="seg" id="qP"><button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button><button data-v="4" class="on">4</button><button data-v="5">5 o più</button></div></div>
+        <div class="q"><label>Quanto spesso butti qualcosa dal frigo?</label>
+          <div class="seg" id="qF"><button data-v=".6">Quasi mai</button><button data-v="1" class="on">Ogni settimana</button><button data-v="1.4">Più volte a settimana</button></div></div>
+        <div class="q" style="margin:0"><label>Quanto spendi di spesa a settimana?</label>
+          <div class="seg" id="qS"><button data-v=".85">meno di 60 €</button><button data-v="1" class="on">60–120 €</button><button data-v="1.25">più di 120 €</button></div></div>
+      </div>
+      <div class="calc-out">
+        <small>Ogni anno butti circa</small>
+        <div class="big"><span id="cE">560</span> <span>€</span></div>
+        <p>di cibo che avevi già pagato. Circa <b id="cK">129</b> kg finiti nell'umido.</p>
+        <div class="eq">
+          <div><b id="cM">12</b><span>spese settimanali buttate</span></div>
+          <div><b id="cP">56</b><span>pizze margherita</span></div>
+          <div><b id="cB">47</b><span>euro buttati ogni mese</span></div>
+        </div>
+        <div class="pay">Con Salvafrigo a {{ product.price | money }} <b id="cR">ti ripaghi in meno di 2 settimane</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COME FUNZIONA ============ -->
+<section style="padding-top:0">
+  <div class="wrap center">
+    <span class="eyebrow rv">Come funziona</span>
+    <h2 class="rv d1">Tre gesti. <em>Zero sprechi.</em></h2>
+  </div>
+  <div class="wrap">
+    <div class="how">
+    <img class="rv" src="{{ 'ph-frigo.jpg' | asset_url }}" alt="Mani che tengono il telefono con l'app davanti al frigo aperto" loading="lazy">
+    <div class="steps">
+      <div class="st rv"><h3>Aggiungi la spesa</h3><p>Fotografi lo scontrino oppure tocchi i prodotti dall'elenco. Le scadenze tipiche le mette l'app, tu correggi solo se serve.</p></div>
+      <div class="st rv d1"><h3>Ricevi l'avviso giusto</h3><p>Due giorni prima della scadenza ti arriva la notifica: "Le zucchine scadono giovedì, ecco 3 ricette da 15 minuti".</p></div>
+      <div class="st rv d2"><h3>Cucini e risparmi</h3><p>Segni "consumato" e il contatore dei soldi salvati sale. Al supermercato l'app ti dice cosa hai già in casa.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APP ============ -->
+<section class="app-s" id="app">
+  <div class="wrap center">
+    <span class="eyebrow rv">Provala qui</span>
+    <h2 class="rv d1">L'app vera, <em>in miniatura.</em></h2>
+    <p class="lead rv d2">Tocca la spunta verde su un prodotto e guarda i soldi salvati volare nel contatore. Poi prova "Scansiona scontrino": il frigo si riempie da solo.</p>
+  </div>
+  <div class="wrap">
+    <div class="app-g">
+      <div class="feat rv" id="feat">
+        <button class="ft on" data-go="frigo"><b>Il frigo che ti fa risparmiare</b><span>Ogni prodotto salvato fa salire il contatore degli euro. Rosso scade a breve, verde tutto ok.</span></button>
+        <button class="ft" data-go="ricette"><b>Ricette svuotafrigo</b><span>Tocca una ricetta: ingredienti, procedimento e quanto risparmi cucinandola.</span></button>
+        <button class="ft" data-go="risparmio"><b>Il contatore dei risparmi</b><span>Quanti euro e chili di cibo hai salvato, mese per mese.</span></button>
+        <button class="ft" data-go="frigo" id="ftScan"><b>Scontrino in un tocco</b><span>Fotografi lo scontrino e il frigo si riempie da solo, con le scadenze già impostate.</span></button>
+      </div>
+      <div class="rv d1">
+        <div class="phone" id="ph">
+          <div class="scr">
+            <div class="sb"><span>18:42</span><span class="ic"><b></b><i></i></span></div>
+            <div class="toast" id="toast"><span class="lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0112 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 003.4 0"/></svg></span><div><small><span>SALVAFRIGO</span><span>adesso</span></small><b>Le zucchine scadono domani</b><br>Frittata di zucchine in 15 minuti?</div></div>
+
+            <div class="vw on" data-v="frigo">
+              <div class="ah"><div><small>Ciao Giulia</small><strong>Il tuo frigo</strong></div><span class="fam"><i style="background:#E0533D">G</i><i style="background:#2F5D46">M</i><i style="background:#E9A23B">L</i></span></div>
+              <div class="saved"><div class="row1"><div><small>Salvati questo mese</small><b id="sv">€ 38,40</b></div><div class="kg"><b id="kg">7,9 kg</b>non buttati</div></div>
+                <div class="bar"><i id="svBar" style="width:83%"></i></div><div class="row2"><span>obiettivo 46 €</span><b id="svY">≈ 460 € in un anno</b></div></div>
+              <button class="alrt" data-go="ricette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 8v5M12 16.5h.01"/><circle cx="12" cy="12" r="9"/></svg><span>2 prodotti scadono entro domani<b>Salvali con una ricetta →</b></span></button>
+              <div class="lbl">Da usare subito</div>
+              <div class="it r" data-id="zucchine" data-e="2.10" data-k=".5"><img loading="lazy" src="{{ 'pr-zucchine.jpg' | asset_url }}" alt=""><div class="x"><b>Zucchine</b><span>2 pezzi · 2,10 €</span></div><em class="cd">domani</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div class="it r" data-id="insalata" data-e="1.90" data-k=".25"><img loading="lazy" src="{{ 'pr-insalata.jpg' | asset_url }}" alt=""><div class="x"><b>Insalata in busta</b><span>1 busta · 1,90 €</span></div><em class="cd">oggi</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div class="it y" data-id="yogurt" data-e="2.40" data-k=".5"><img loading="lazy" src="{{ 'pr-yogurt.jpg' | asset_url }}" alt=""><div class="x"><b>Yogurt bianco</b><span>4 vasetti · 2,40 €</span></div><em class="cd">3 giorni</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div class="lbl" id="okLbl">Tutto ok</div>
+              <div class="it g" data-id="mozzarella" data-e="2.05" data-k=".25"><img loading="lazy" src="{{ 'pr-mozzarella.jpg' | asset_url }}" alt=""><div class="x"><b>Mozzarella</b><span>1 pezzo · 2,05 €</span></div><em class="cd">6 giorni</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div class="it g" data-id="pomodori" data-e="1.60" data-k=".6"><img loading="lazy" src="{{ 'pr-pomodori.jpg' | asset_url }}" alt=""><div class="x"><b>Pomodori</b><span>3 pezzi · 1,60 €</span></div><em class="cd">5 giorni</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div class="it g" data-id="prosciutto" data-e="3.20" data-k=".1"><img loading="lazy" src="{{ 'pr-prosciutto.jpg' | asset_url }}" alt=""><div class="x"><b>Prosciutto cotto</b><span>100 g · 3,20 €</span></div><em class="cd">8 giorni</em><button aria-label="Segna come usato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></div>
+              <div style="height:54px"></div>
+            </div>
+
+            <div class="vw" data-v="ricette">
+              <div class="ah"><div><small>Con quello che hai</small><strong>Cosa cucino?</strong></div></div>
+              <div class="rc" data-r="frittata"><div class="ph" style="background-image:url({{ 'rc-frittata-zucchine.jpg' | asset_url }})" role="img" aria-label="Frittata di zucchine e menta"></div><div class="bd"><b>Frittata di zucchine</b><span>15 min · per 2</span><div class="tg"><i class="eur">salvi 2,10 €</i><i>usa le zucchine di domani</i></div><span class="vai">Vedi la ricetta →</span></div></div>
+              <div class="rc" data-r="polpette"><div class="ph" style="background-image:url({{ 'rc-polpette.jpg' | asset_url }})" role="img" aria-label="Polpette di pane raffermo"></div><div class="bd"><b>Polpette di pane</b><span>20 min · per 4</span><div class="tg"><i class="eur">salvi 1,20 €</i><i>salva il pane di ieri</i></div><span class="vai">Vedi la ricetta →</span></div></div>
+              <div class="rc" data-r="panzanella"><div class="ph" style="background-image:url({{ 'rc-panzanella.jpg' | asset_url }})" role="img" aria-label="Panzanella toscana"></div><div class="bd"><b>Panzanella</b><span>10 min · per 2</span><div class="tg"><i class="eur">salvi 2,80 €</i><i>pomodori e pane</i></div><span class="vai">Vedi la ricetta →</span></div></div>
+            </div>
+
+            <div class="vw" data-v="ricetta" id="rcD"></div>
+
+            <div class="vw" data-v="risparmio">
+              <div class="ah"><div><small>Ottobre</small><strong>I tuoi risparmi</strong></div></div>
+              <div class="chart"><small>Euro buttati: prima e dopo Salvafrigo</small>
+                <div class="bars" id="bars"><div><i class="w" data-h="92"></i><span>Lug</span></div><div><i class="w" data-h="85"></i><span>Ago</span></div><div><i data-h="38"></i><span>Set</span></div><div><i data-h="16"></i><span>Ott</span></div></div></div>
+              <div class="proj"><small>A questo ritmo</small><b>≈ 460 € in un anno</b><span>circa 10 spese settimanali che non finiscono nel cestino</span></div>
+              <div class="stat2"><div><b>€ 152</b><span>salvati da settembre</span></div><div><b>31 kg</b><span>di cibo non buttato</span></div><div><b>24</b><span>ricette svuotafrigo fatte</span></div><div><b>−83%</b><span>cibo nell'umido</span></div></div>
+              <div class="lbl">Ultimi salvataggi</div>
+              <div id="log"><div class="lg2"><span>Petto di pollo · cucinato</span><b>+ 4,90 €</b></div><div class="lg2"><span>Banane · frullato</span><b>+ 1,30 €</b></div><div class="lg2"><span>Doppione evitato · latte</span><b>+ 1,49 €</b></div></div>
+            </div>
+
+            <div class="vw" data-v="spesa">
+              <div class="ah"><div><small>Supermercato</small><strong>Lista della spesa</strong></div></div>
+              <div class="warn" id="warn"><span><b>Mozzarella:</b> ce l'hai già in frigo, scade tra 6 giorni. La togliamo dalla lista?</span><button id="togli">Toglila</button></div>
+              <div class="sp"><i></i><span>Latte parzialmente scremato</span></div>
+              <div class="sp" id="spMozz"><i></i><span>Mozzarella</span><em>già in frigo</em></div>
+              <div class="sp"><i></i><span>Pasta (1 kg)</span></div>
+              <div class="sp"><i></i><span>Mele (4)</span></div>
+              <div class="sp"><i></i><span>Yogurt bianco</span><em>ne hai 4</em></div>
+              <div class="sp"><i></i><span>Petto di pollo</span></div>
+            </div>
+
+            <button class="scan" id="scanBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3M7 12h10"/></svg>Scansiona scontrino</button>
+            <div class="scan-ov" id="scanOv"><div class="fr"><div><span>LATTE PS 1L</span><span>1,49</span></div><div><span>UOVA X6</span><span>2,39</span></div><div><span>DETERSIVO</span><span>3,90</span></div><div><span>SPINACI 300G</span><span>1,79</span></div></div><p id="scanTx">Sto leggendo lo scontrino…</p></div>
+            <div class="tabbar" id="tabs">
+              <button class="on" data-go="frigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 6v1M9 13v3"/></svg>Frigo</button>
+              <button data-go="ricette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18a9 9 0 01-18 0z"/><path d="M12 3v4M8 5v2M16 5v2"/></svg>Ricette</button>
+              <button data-go="risparmio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19l5-6 4 3 7-9"/></svg>Risparmio</button>
+              <button data-go="spesa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Spesa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cap rv d2">
+        <h3 id="capT">Ogni prodotto salvato sono soldi in tasca</h3>
+        <p id="capP">Tocca la spunta verde: vedi quanti euro hai salvato e quanto risparmi in un anno. Prova anche "Scansiona scontrino".</p>
+        <span class="hint"><i></i>Tocca l'app: funziona davvero</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RICETTE ============ -->
+<section id="ricette">
+  <div class="wrap center">
+    <span class="eyebrow rv">Cucina di casa</span>
+    <h2 class="rv d1">Le nonne non buttavano niente.<br><em>Ora nemmeno tu.</em></h2>
+    <p class="lead rv d2">Ricette svuotafrigo della tradizione italiana, scelte in base a quello che sta per scadere nel tuo frigo.</p>
+  </div>
+  <div class="wrap">
+    <div class="rec-g">
+      <div class="rec rv"><div class="ph" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.6)),url({{ 'rc-polpette.jpg' | asset_url }})">Polpette di pane raffermo</div><div class="bd"><small>Salva il pane</small><p>Il pane di due giorni fa diventa la cena dei bambini.</p></div></div>
+      <div class="rec rv d1"><div class="ph" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.6)),url({{ 'rc-frittata-pasta.jpg' | asset_url }})">Frittata di pasta</div><div class="bd"><small>Salva gli avanzi</small><p>La pasta di ieri, uova e parmigiano: il classico napoletano.</p></div></div>
+      <div class="rec rv d2"><div class="ph" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.6)),url({{ 'rc-ribollita.jpg' | asset_url }})">Ribollita</div><div class="bd"><small>Salva le verdure</small><p>Le verdure un po' stanche e il pane: un piatto toscano.</p></div></div>
+      <div class="rec rv d3"><div class="ph" style="background-image:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.6)),url({{ 'rc-torta-mele.jpg' | asset_url }})">Torta di mele</div><div class="bd"><small>Salva la frutta</small><p>Le mele ammaccate diventano la colazione di domani.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFRONTO ============ -->
+<section style="padding-top:0">
+  <div class="wrap center">
+    <span class="eyebrow rv">Il confronto</span>
+    <h2 class="rv d1">Costa meno di quello<br><em>che butti in un mese.</em></h2>
+  </div>
+  <div class="wrap">
+    <div class="tbl rv">
+      <div class="tr hd"><div></div><div>Memoria e post-it</div><div>App straniere</div><div class="us"><small>La scelta giusta</small>Salvafrigo</div></div>
+      <div class="tr"><div>Prezzo</div><div>gratis</div><div>abbonamento</div><div class="us">{{ product.price | money }} una volta</div></div>
+      <div class="tr"><div>Avviso prima della scadenza</div><div><span class="ck-n"></span></div><div><span class="ck-y"></span></div><div class="us"><span class="ck-y"></span></div></div>
+      <div class="tr"><div>Ricette della cucina italiana</div><div><span class="ck-n"></span></div><div><span class="ck-n"></span></div><div class="us"><span class="ck-y"></span></div></div>
+      <div class="tr"><div>Ti blocca i doppioni al supermercato</div><div><span class="ck-n"></span></div><div><span class="ck-n"></span></div><div class="us"><span class="ck-y"></span></div></div>
+      <div class="tr"><div>Contatore dei soldi salvati</div><div><span class="ck-n"></span></div><div><span class="ck-n"></span></div><div class="us"><span class="ck-y"></span></div></div>
+      <div class="tr"><div>Tutta la famiglia sulla stessa lista</div><div><span class="ck-n"></span></div><div><span class="ck-y"></span></div><div class="us"><span class="ck-y"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERTA ============ -->
+<section id="offerta" style="padding-top:0">
+  <div class="wrap">
+    <div class="offer rv">
+      <div>
+        <span class="eyebrow" style="color:#FFD58A">Prezzo di lancio</span>
+        <h2>Smetti di regalare<br><em>una spesa al mese</em> al cestino.</h2>
+        <p class="lead">Paghi una volta sola e la usi per sempre, con tutta la famiglia.</p>
+        <ul class="inc">
+          <li>App Salvafrigo per iPhone e Android, accesso a vita</li>
+          <li>Avvisi di scadenza e lettura dello scontrino</li>
+          <li>Oltre 300 ricette svuotafrigo della cucina italiana</li>
+          <li>Lista della spesa condivisa con la famiglia</li>
+          <li>Contatore dei soldi e dei chili salvati</li>
+        </ul>
+      </div>
+      <div class="buybox">
+        <span class="tag">−49% solo al lancio</span>
+        <div class="pr">{{ product.price | money }}<s>59 €</s></div>
+        <div class="once">una volta sola · nessun abbonamento</div>
+        <button class="btn alt buy">Inizia a risparmiare <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="roi">Una famiglia di 4 butta in media 46 € al mese: Salvafrigo si ripaga in meno di 3 settimane.</div>
+        <div class="gar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Garanzia "ti ripaghi o rimborso":</b> se in 30 giorni non risparmi almeno quello che hai speso, ti restituiamo i soldi.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap center"><span class="eyebrow rv">Domande</span><h2 class="rv d1">Tutto quello che <em>vuoi sapere</em></h2></div>
+  <div class="faq">
+    <div class="fq"><button>Devo inserire a mano ogni prodotto?<i></i></button><div class="a"><div><p>No. Puoi fotografare lo scontrino oppure toccare i prodotti da un elenco già pronto. Le scadenze tipiche le propone l'app: tu le correggi solo se sulla confezione c'è scritto diversamente.</p></div></div></div>
+    <div class="fq"><button>Funziona su iPhone e Android?<i></i></button><div class="a"><div><p>Sì, su entrambi. Si apre dal browser e si aggiunge alla schermata Home come una normale app: ti mostriamo come fare in 3 passaggi.</p></div></div></div>
+    <div class="fq"><button>Posso usarla con tutta la famiglia?<i></i></button><div class="a"><div><p>Sì. Frigo e lista della spesa sono condivisi: se tuo marito o tua moglie compra il latte, lo vedi subito anche tu ed eviti il doppione.</p></div></div></div>
+    <div class="fq"><button>È un abbonamento?<i></i></button><div class="a"><div><p>No. Paghi {{ product.price | money }} una volta sola e la usi per sempre, aggiornamenti compresi.</p></div></div></div>
+    <div class="fq"><button>E se non risparmio niente?<i></i></button><div class="a"><div><p>Hai 30 giorni di garanzia: se il contatore non arriva almeno al prezzo che hai pagato, scrivici e ti rimborsiamo, senza domande.</p></div></div></div>
+  </div>
+</section>
+
+<footer><b>Salvafrigo</b>Meno cibo nel cestino, più soldi in tasca.<br>Dati sullo spreco: Osservatorio Waste Watcher, rapporto "Il caso Italia" 2025.</footer>
+
+<div class="stk" id="stk"><div><b>{{ product.price | money }}</b><small>una volta sola · nessun abbonamento</small></div><a class="btn buy" href="#offerta">Inizia ora</a></div>
+
+
+</div>
+<script src="{{ 'pl-page.js' | asset_url }}" defer></script>

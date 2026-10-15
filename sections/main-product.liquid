@@ -1,0 +1,33 @@
+{%- comment -%}
+  Dispatcher: la pagina clonata parte anche senza assegnare il template a mano,
+  perche' lavora su template.suffix con fallback sull'handle del prodotto.
+{%- endcomment -%}
+{%- assign dp_key = template.suffix | default: product.handle -%}
+{%- case dp_key -%}
+{%- when 'salvafrigo' -%}
+  {% render 'pl-page', product: product %}
+{%- else -%}
+  <div class="wrap dp-page" style="max-width:1000px">
+    <div class="dp-prod">
+      {%- if product.featured_image -%}
+        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}" style="width:100%;border-radius:16px">
+      {%- endif -%}
+      <div>
+        <h1>{{ product.title }}</h1>
+        <p style="font-size:24px;font-weight:800;margin:8px 0 4px">
+          {{ product.price | money }}
+          {%- if product.compare_at_price > product.price %} <s style="color:var(--muted);font-weight:500;font-size:18px">{{ product.compare_at_price | money }}</s>{% endif -%}
+        </p>
+        <p style="color:var(--muted);font-size:13px;margin:0 0 18px">Prodotto digitale — nessuna spedizione.</p>
+        {%- form 'product', product -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button type="submit" class="dp-btn dp-btn--brand dp-btn--wide">Aggiungi al carrello</button>
+        {%- endform -%}
+        <div style="color:#4B5261;line-height:1.7;margin-top:22px">{{ product.description }}</div>
+      </div>
+    </div>
+  </div>
+{%- endcase -%}
+{% schema %}
+{ "name": "Prodotto", "settings": [] }
+{% endschema %}

@@ -1,0 +1,32 @@
+<header class="dp-header">
+  <div class="wrap dp-header__in">
+    <a class="dp-logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 420 | image_tag:
+           class: 'dp-logo__img', alt: shop.name, widths: '160,240,320,420',
+           style: 'height:auto;width:auto;max-height:46px' }}
+      {%- else -%}
+        <img class="dp-logo__img" src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}"
+             style="height:40px;width:auto">
+      {%- endif -%}
+    </a>
+    <nav class="dp-nav">
+      <a href="{{ routes.root_url }}#calcolo">Quanto butti</a>
+      <a href="{{ routes.root_url }}#app">L'app</a>
+      <a href="{{ routes.root_url }}#ricette">Ricette</a>
+      <a href="{{ routes.root_url }}#faq">FAQ</a>
+    </nav>
+    <a class="dp-header__cart" href="{{ routes.cart_url }}">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      Carrello ({{ cart.item_count }})
+    </a>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo del negozio", "info": "Se lo carichi sostituisce il logo incluso nel tema (assets/logo.png). Consigliato PNG trasparente, altezza 200-300 px." }
+  ]
+}
+{% endschema %}
